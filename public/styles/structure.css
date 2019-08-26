@@ -1,0 +1,91 @@
+body {
+  background: black url('images/laptop_image_01.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: blue;
+  font-family: sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: darkred;
+  margin-bottom: 20px;
+}
+
+a, a:link, a:visited {
+  color: #a2937e;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #c6e2ff;
+}
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+li{
+  padding-right: 30px;
+  display: inline-block;
+}
+
+main {
+  padding: 25px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+
+#content {
+  border-top: 1px solid black;
+  padding-left: 25px;
+  padding-top:20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.nav-box {
+  border-right: 1px darkred solid;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: row;
+}

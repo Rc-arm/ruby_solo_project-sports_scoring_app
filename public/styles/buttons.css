@@ -1,0 +1,20 @@
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: blue;
+  cursor:pointer;
+  font-family: sans-serif;
+}
+
+.btn--action:hover {
+  background-color: green;
+}
+
+.btn--action {
+  background-color: lightblue;
+}
+
+.btn--wrapper {
+  margin: 50px 0px 30px -115px;
+}
