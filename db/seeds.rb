@@ -16,7 +16,7 @@ team1 = Team.new({
 team1.save()
 
 team2 = Team.new({
-  "name" => "Spending Tracker",
+  "name" => "Shop Inventory",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -26,7 +26,7 @@ team2 = Team.new({
 team2.save()
 
 team3 = Team.new({
-  "name" => "Vet Management",
+  "name" => "Spending Tracker",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -56,7 +56,7 @@ team5 = Team.new({
 team5.save()
 
 team6 = Team.new({
-  "name" => "Shop Inventory",
+  "name" => "Vet Management",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
