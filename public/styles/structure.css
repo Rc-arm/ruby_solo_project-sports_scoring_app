@@ -1,43 +1,40 @@
 body {
-  background: black url('images/laptop_image_01.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: blue;
+  background-color: darkblue;
+  color: royalblue;
   font-family: sans-serif;
-  padding: 0px;
-  margin: 0px;
+  padding: 10px;
+  margin: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: royalblue;
   font-family: sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 10px;
+  padding: 10px;
 }
 
 h1 {
   font-size: 1.8em;
-  color: darkred;
+  color: royalblue;
   margin-bottom: 20px;
 }
 
 a, a:link, a:visited {
-  color: #a2937e;
+  color: blue;
   text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
-  color: #c6e2ff;
+  color: green;
 }
 
 nav {
-  padding: 0px;
-  margin: 0px;
-  padding-right: 25px;
+  padding: 10px;
+  margin: 10px;
 }
 
 nav ul li {
   margin-bottom: 15px;
-  text-transform: uppercase;
 }
 
 ul {
@@ -47,12 +44,12 @@ ul {
 }
 
 li{
-  padding-right: 30px;
+  padding-right: 15px;
   display: inline-block;
 }
 
 main {
-  padding: 25px;
+  padding: 5px;
 }
 
 .flex {
@@ -65,15 +62,14 @@ main {
   display: inline-block;
 }
 
-
-#content {
+/* #content {
   border-top: 1px solid black;
   padding-left: 25px;
   padding-top:20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
+} */
 
 .grid {
   width: 500px;
@@ -82,7 +78,7 @@ main {
 }
 
 .nav-box {
-  border-right: 1px darkred solid;
+  border: 1px lightblue solid;
 }
 
 .content-box {
