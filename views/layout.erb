@@ -2,21 +2,35 @@
 <html>
 <head>
   <title>Ultimate Hackathon League</title>
-  
+
   <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
   <link rel="stylesheet" type="text/css" href="/styles/forms.css">
   <link rel="stylesheet" type="text/css" href="/styles/structure.css">
   <link rel="stylesheet" type="text/css" href="/styles/tables.css">
 </head>
 <body>
-  <h1>Ultimate Hackathon League</h1>
-  <h2>Homepage</h2>
-    <ul>
-      <li>Add a Team</li>
-      <li>Go to Game</li>
-      <li>Teams List</li>
-      <li>Fixtures List</li>
-      <li>(League Table to be displayed on right of screen)</li>
-    </ul>
+<nav>
+  <ul>
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <a href="/games">Game</a>
+    </li>
+    <li>
+      <a href="/teams">Teams</a>
+    </li>
+    <li>
+      <a href="">Fixtures</a>
+    </li>
+    <li>
+      <a href="">League Table</a>
+    </li>
+    <li>
+      <a href="">About</a>
+    </li>
+  </ul>
+</nav>
+    <%= yield %>
 </body>
 </html>

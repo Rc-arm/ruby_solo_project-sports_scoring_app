@@ -33,13 +33,14 @@ class Game
     SET
     (
       team_a_id,
-      team_b_id
+      team_b_id,
+      winner_team_id
     ) =
     (
-      $1, $2
+      $1, $2, $3
     )
-    WHERE id = $3"
-    values = [@team_a_id, @team_b_id]
+    WHERE id = $4"
+    values = [@team_a_id, @team_b_id, @winner_team_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -66,59 +67,24 @@ class Game
     return game_data.map { |game| Game.new(game) }
   end
 
-  def play(team_a, team_b)
+  def team_a
+# What does this need to do? In the game there's a team_a and a team_b (where team_a currently is always the winner). This method is for
+  end
+
+  def team_b
+
+  end
+
+  def play()
     # Input team_a_id and team_b_id [DONE above - adding get team.id from team.find_id]
     # team_a.find_id
     # team_b.find_id
     # Select team_a_id as winner, team_b_id as loser {this will become select random winner, then select winner based on attributes} [DONE]
-    winner = team_a
-    puts "And the winner is... #{winner}"
-    sql = "UPDATE games
-    SET
-    (
-      winner_team_id,
-    )
-    "
-    # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet
-  end
-
-  def won
-    # SQL: Take winner value and update teams table = increase played by 1, increase won by 1, increase points by 1
-    sql = "UPDATE teams
-    SET
-    (
-      played,
-      won,
-      points
-    )
-    =
-    (
-      played + 1,
-      won + 1,
-      points + 1
-    )
-    WHERE id = winner
-    "
-    values = [@played, @won, @points]
-    SqlRunner.run(sql, values)
-  end
-
-  def lost
-    # SQL: Take not-winner value and update teams table = increase played by 1, increase lost by 1
-    sql = "UPDATE teams
-    SET
-    (
-      played = played + 1,
-      lost = lost + 1,
-    )
-    =
-    (
-      $1, $2
-    )
-    WHERE id = not_winner
-    "
-    values = [@played, @lost]
-    SqlRunner.run(sql, values)
+    @winner_team_id = @team_a_id
+    update()
+    # Updates winner_team_id column on games table
+    # puts "And the winner is... #{winner}"
+    # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet  end
   end
 
 end

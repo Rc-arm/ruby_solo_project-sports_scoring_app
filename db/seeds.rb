@@ -1,6 +1,6 @@
-require_relative( "../models/team.rb" )
-require_relative( "../models/game.rb" )
-require("pry-byebug")
+require('pry')
+require_relative('../models/team.rb')
+require_relative('../models/game.rb')
 
 Game.delete_all()
 Team.delete_all()

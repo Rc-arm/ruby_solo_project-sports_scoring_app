@@ -85,17 +85,6 @@ class Team
     return team
   end
 
-  # def self.name(id)
-  #   sql = "SELECT name FROM teams
-  #   WHERE id = $1"
-  #   values = [id]
-  #   result = SqlRunner.run(sql, values).first
-  #   team = Team.new(result)
-  #   return team
-  #   # Need to add in capitalize function
-  # end
-  # Not sure if I need this, 10:11 Tue 27th
-
   def self.delete_all
     sql = "DELETE FROM teams"
     SqlRunner.run( sql )
@@ -103,6 +92,19 @@ class Team
 
   def self.map_items(game_data)
     return game_data.map { |game| Game.new(game) }
+  end
+
+  def won
+    @played +=
+    @won +=
+    @points +=
+    update()
+  end
+
+  def lost
+    @played +=
+    @lost +=
+    update()
   end
 
 end
