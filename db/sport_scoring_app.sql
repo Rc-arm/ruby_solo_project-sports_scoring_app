@@ -13,5 +13,6 @@ CREATE TABLE teams (
 CREATE TABLE games (
   id SERIAL8 primary key,
   team_a_id INT8 REFERENCES teams(id),
-  team_b_id INT8 REFERENCES teams(id)
+  team_b_id INT8 REFERENCES teams(id),
+  winner_team_id INT8 REFERENCES teams(id)
 );

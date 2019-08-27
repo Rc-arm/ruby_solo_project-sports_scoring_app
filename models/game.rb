@@ -9,6 +9,7 @@ class Game
     @id = options['id'].to_i if options['id']
     @team_a_id = options['team_a_id'].to_i
     @team_b_id = options['team_b_id'].to_i
+    @winner_team_id = options['winner_team_id'].to_i if options['winner_team_id']
   end
 
   def save()
@@ -67,31 +68,41 @@ class Game
 
   def play(team_a, team_b)
     # Input team_a_id and team_b_id [DONE above - adding get team.id from team.find_id]
-    team_a.find_id
-    team_b.find_id
+    # team_a.find_id
+    # team_b.find_id
     # Select team_a_id as winner, team_b_id as loser {this will become select random winner, then select winner based on attributes} [DONE]
     winner = team_a
-    loser = team_b
+    puts "And the winner is... #{winner}"
     # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet
     # Update team_a_id on teams table: increase played by 1, increas won by 1, increase points by 1
-    sql = "UPDATE teams
-    SET
-    (
-      played +=,
-      won +=,
-      points +=
-    )
-    WHERE id = team_a.id
-    "
-    # Update team_b_id on teams table: increase played by 1, increas lost by 1
-    sql = "UPDATE teams
-    SET
-    (
-      played +=,
-      lost +=,
-    )
-    WHERE id = team_b.id
-    "
+    # sql = "UPDATE teams
+    # SET
+    # (
+    #   played +=,
+    #   won +=,
+    #   points +=
+    # )
+    # =
+    # (
+    #   $1, $2, $4
+    # )
+    # WHERE id = winner
+    # "
+    # # Update team_b_id on teams table: increase played by 1, increas lost by 1
+    # sql = "UPDATE teams
+    # SET
+    # (
+    #   played +=,
+    #   lost +=,
+    # )
+    # =
+    # (
+    #   $1, $3
+    # )
+    # WHERE id = loser
+    # "
+    # values = [@played, @won, @lost, @points]
+    # SqlRunner.run(sql, values)
   end
 
 end

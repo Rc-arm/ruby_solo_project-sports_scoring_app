@@ -8,10 +8,10 @@ class Team
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @played = options['played'].to_i
-    @won = options['won'].to_i
-    @lost = options['lost'].to_i
-    @points = options['points'].to_i
+    @played = options['played'] ? options['played'].to_i : 0
+    @won = options['won'] ? options['won'].to_i : 0
+    @lost = options['lost'] ? options['lost'].to_i : 0
+    @points = options['points'] ? options['points'].to_i : 0
   end
 
   def save()
@@ -83,7 +83,6 @@ class Team
     result = SqlRunner.run(sql, values).first
     team = Team.new(result)
     return team
-    # Need to add in capitalize function
   end
 
   # def self.name(id)
