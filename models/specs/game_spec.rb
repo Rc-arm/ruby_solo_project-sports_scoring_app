@@ -13,11 +13,12 @@ class GameTest < MiniTest::Test
       'won' => 1,
       'lost' => 0,
       'points' => 1
-      # These are here as an example, don't need them because they're set as 0 in team.rb
     })
+
     @test_team_b = Team.new({
       'name' => "Test Team B"
     })
+    
     @test_game_01 = Game.new({
       'team_a_id' => @test_team_a.id,
       'team_b_id' => @test_team_b.id

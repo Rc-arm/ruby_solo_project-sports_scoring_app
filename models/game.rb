@@ -73,36 +73,52 @@ class Game
     # Select team_a_id as winner, team_b_id as loser {this will become select random winner, then select winner based on attributes} [DONE]
     winner = team_a
     puts "And the winner is... #{winner}"
+    sql = "UPDATE games
+    SET
+    (
+      winner_team_id,
+    )
+    "
     # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet
-    # Update team_a_id on teams table: increase played by 1, increas won by 1, increase points by 1
-    # sql = "UPDATE teams
-    # SET
-    # (
-    #   played +=,
-    #   won +=,
-    #   points +=
-    # )
-    # =
-    # (
-    #   $1, $2, $4
-    # )
-    # WHERE id = winner
-    # "
-    # # Update team_b_id on teams table: increase played by 1, increas lost by 1
-    # sql = "UPDATE teams
-    # SET
-    # (
-    #   played +=,
-    #   lost +=,
-    # )
-    # =
-    # (
-    #   $1, $3
-    # )
-    # WHERE id = loser
-    # "
-    # values = [@played, @won, @lost, @points]
-    # SqlRunner.run(sql, values)
+  end
+
+  def won
+    # SQL: Take winner value and update teams table = increase played by 1, increase won by 1, increase points by 1
+    sql = "UPDATE teams
+    SET
+    (
+      played,
+      won,
+      points
+    )
+    =
+    (
+      played + 1,
+      won + 1,
+      points + 1
+    )
+    WHERE id = winner
+    "
+    values = [@played, @won, @points]
+    SqlRunner.run(sql, values)
+  end
+
+  def lost
+    # SQL: Take not-winner value and update teams table = increase played by 1, increase lost by 1
+    sql = "UPDATE teams
+    SET
+    (
+      played = played + 1,
+      lost = lost + 1,
+    )
+    =
+    (
+      $1, $2
+    )
+    WHERE id = not_winner
+    "
+    values = [@played, @lost]
+    SqlRunner.run(sql, values)
   end
 
 end
