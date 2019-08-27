@@ -76,6 +76,27 @@ class Team
     # Need to add in capitalize function
   end
 
+  def self.find_id(id)
+    sql = "SELECT id FROM teams
+    WHERE name = $1"
+    values = [name]
+    result = SqlRunner.run(sql, values).first
+    team = Team.new(result)
+    return team
+    # Need to add in capitalize function
+  end
+
+  # def self.name(id)
+  #   sql = "SELECT name FROM teams
+  #   WHERE id = $1"
+  #   values = [id]
+  #   result = SqlRunner.run(sql, values).first
+  #   team = Team.new(result)
+  #   return team
+  #   # Need to add in capitalize function
+  # end
+  # Not sure if I need this, 10:11 Tue 27th
+
   def self.delete_all
     sql = "DELETE FROM teams"
     SqlRunner.run( sql )
