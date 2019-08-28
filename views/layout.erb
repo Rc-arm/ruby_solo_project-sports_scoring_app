@@ -3,36 +3,53 @@
 <head>
   <title>Ultimate Hackathon League</title>
 
-  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
   <link rel="stylesheet" type="text/css" href="/styles/forms.css">
   <link rel="stylesheet" type="text/css" href="/styles/structure.css">
-  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tables.css"> -->
 </head>
 <body>
-<h1>Ultimate Hackathon League</h1>
-<h2>Sponsored by CodeClan</h2>
-<nav>
-  <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/games">Game</a>
-    </li>
-    <li>
-      <a href="/teams">Teams</a>
-    </li>
-    <li>
-      <a href="/fixtures">Fixtures</a>
-    </li>
-    <li>
-      <a href="/league_table">League Table</a>
-    </li>
-    <li>
-      <a href="/about">About</a>
-    </li>
-  </ul>
-</nav>
-<%= yield %>
+  <div class="wrapper"
+    <h1>Ultimate Hackathon League</h1>
+    <h2>Sponsored by CodeClan</h2>
+    <nav class="main-nav">
+      <ul id="homepage-list">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/games" class="btn">Game</a>
+        </li>
+        <li>
+          <a href="/teams" class="btn">Teams</a>
+        </li>
+        <li>
+          <a href="/fixtures" class="btn">Fixtures</a>
+        </li>
+        <li>
+          <a href="/league-table" class="btn">League Table</a>
+        </li>
+        <li>
+          <a href="/about" class="btn">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Top Container -->
+    <section class="top-container"
+      <header class="showcase"
+        <h1></h1>
+      </header>
+    </section>
+
+    <%= yield %>
+  </div>
+  <!-- Wrapper ends -->
+
+  <!-- Footer -->
+  <footer>
+    <p>Made by Rob &copy; </p>
+  </footer>
 </body>
+
 </html>

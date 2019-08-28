@@ -7,7 +7,7 @@ body {
   margin: 10px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   color: royalblue;
   font-family: sans-serif;
   font-size: 12pt;
@@ -51,7 +51,12 @@ ul {
   list-style-type: none;
 }
 
-li{
+ul#homepage-list {
+  min-width: 40px;
+  color: red;
+}
+
+li {
   padding-right: 15px;
   display: inline-block;
 }
@@ -60,7 +65,7 @@ main {
   padding: 5px;
 }
 
-.flex {
+/* .flex {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -68,7 +73,7 @@ main {
 
 .inline-block{
   display: inline-block;
-}
+} */
 
 /* #content {
   border-top: 1px solid black;
@@ -79,17 +84,17 @@ main {
   flex-wrap: wrap;
 } */
 
-.grid {
+/* .grid {
   width: 500px;
   display: grid;
   grid-template-columns: 20% 80%;
-}
+} */
 
-.nav-box {
+/* .nav-box {
   border: 1px lightblue solid;
-}
+} */
 
-.content-box {
+/* .content-box {
   display: flex;
   flex-direction: row;
-}
+} */
