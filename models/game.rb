@@ -1,5 +1,5 @@
 require_relative('../db/sql_runner')
-require_relative('./team')
+require_relative('./team.rb')
 
 class Game
 
@@ -35,13 +35,14 @@ class Game
     (
       team_a_id,
       team_b_id,
-      winner_team_id
+      winner_team_id,
+      loser_team_id
     ) =
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
-    WHERE id = $4"
-    values = [@team_a_id, @team_b_id, @winner_team_id, @id]
+    WHERE id = $5"
+    values = [@team_a_id, @team_b_id, @winner_team_id, @loser_team_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -69,23 +70,30 @@ class Game
   end
 
   def team_a
-# What does this need to do? In the game there's a team_a and a team_b (where team_a currently is always the winner). This method is for taking the team from the database and applying a won/lost condition to it then feeding that back to the database.
+# What does this need to do? In the game there's a team_a and a team_b (where team_a currently is always the winner). This method is for taking the team from the database so it can be used in .play.
+  @team_a_id = team_a(id)
   end
 
   def team_b
-
+    @team_b_id = team_b(id)
   end
 
-  def play()
-    # Input team_a_id and team_b_id [DONE above - adding get team.id from team.find_id]
-    # team_a.find_id
-    # team_b.find_id
-    # Select team_a_id as winner, team_b_id as loser {this will become select random winner, then select winner based on attributes} [DONE]
-    @winner_team_id = @team_a_id
-    @loser_team_id = @team_b_id
-    update()
-    # Updates winner_team_id column on games table
-    # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet
+  # def play()
+  #   # team_a.find_id
+  #   # team_b.find_id
+  #   # Select team_a_id as winner, team_b_id as loser {this will become select random winner, then select winner based on attributes}
+  #   @winner_team_id = @team_a_id
+  #   @loser_team_id = @team_b_id
+  #   update()
+  #   puts @winner_team_id
+  #   # Updates winner_team_id column on games table
+  #   # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet
+  # end
+
+  def play(teams)
+    teams = [@team_a_id, @team_b_id]
+    winning_team = teams.sample()
+    puts winning_team
   end
 
 end
