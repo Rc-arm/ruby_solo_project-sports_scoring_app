@@ -10,6 +10,7 @@ class Game
     @team_a_id = options['team_a_id'].to_i
     @team_b_id = options['team_b_id'].to_i
     @winner_team_id = options['winner_team_id'].to_i if options['winner_team_id']
+    @loser_team_id = options['loser_team_id'].to_i if options['loser_team_id']
   end
 
   def save()
@@ -68,7 +69,7 @@ class Game
   end
 
   def team_a
-# What does this need to do? In the game there's a team_a and a team_b (where team_a currently is always the winner). This method is for
+# What does this need to do? In the game there's a team_a and a team_b (where team_a currently is always the winner). This method is for taking the team from the database and applying a won/lost condition to it then feeding that back to the database.
   end
 
   def team_b
@@ -81,10 +82,10 @@ class Game
     # team_b.find_id
     # Select team_a_id as winner, team_b_id as loser {this will become select random winner, then select winner based on attributes} [DONE]
     @winner_team_id = @team_a_id
+    @loser_team_id = @team_b_id
     update()
     # Updates winner_team_id column on games table
-    # puts "And the winner is... #{winner}"
-    # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet  end
+    # Display result on webpage - 10:04 Tue 27th: I don't know how to do this yet
   end
 
 end

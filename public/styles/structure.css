@@ -2,6 +2,7 @@ body {
   background-color: darkblue;
   color: royalblue;
   font-family: sans-serif;
+  font-size: 12pt;
   padding: 10px;
   margin: 10px;
 }
@@ -9,14 +10,21 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: royalblue;
   font-family: sans-serif;
-  margin: 10px;
-  padding: 10px;
+  font-size: 12pt;
+  margin: 5px;
+  padding: 5px;
 }
 
 h1 {
   font-size: 1.8em;
   color: royalblue;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 0.5em;
+  color: royalblue;
+  margin-bottom: 2px;
 }
 
 a, a:link, a:visited {
@@ -25,7 +33,7 @@ a, a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
-  color: green;
+  color: purple;
 }
 
 nav {

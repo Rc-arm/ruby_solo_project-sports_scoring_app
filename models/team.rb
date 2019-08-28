@@ -95,15 +95,15 @@ class Team
   end
 
   def won
-    @played +=
-    @won +=
-    @points +=
+    @played += 1
+    @won += 1
+    @points += 3
     update()
   end
 
   def lost
-    @played +=
-    @lost +=
+    @played += 1
+    @lost += 1
     update()
   end
 
