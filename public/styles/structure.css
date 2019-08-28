@@ -66,6 +66,20 @@ img {
     'main-box-a main-box-b';
 }
 
+/* Header */
+.header {
+  grid-area: header;
+  min-height: 50px;
+}
+
+.main-box-a {
+  grid-area: main-box-a;
+}
+
+.main-box-b {
+  grid-area: main-box-b;
+}
+
 /* h1, h2, h3 {
   color: royalblue;
   font-family: sans-serif;
