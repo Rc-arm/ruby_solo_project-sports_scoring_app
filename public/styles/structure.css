@@ -1,13 +1,72 @@
-body {
-  background-color: darkblue;
-  color: royalblue;
-  font-family: sans-serif;
-  font-size: 12pt;
-  padding: 10px;
-  margin: 10px;
+/* CSS Variables */
+:root {
+  --primary-blue: #0066ff;
+  --dark-blue: #0047b3;
+  --light-blue: #3385ff;
+  --primary-purple: #8600b3;
+  --dark-purple: #4d0066;
+  --light-purple: #ac00e6;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
-h1, h2, h3 {
+/* Core Styles */
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background-color: #66a3ff;
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+/* Navigation */
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a {
+  background: var(--primary-blue);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark-blue);
+  text-transform: uppercase;;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+  background: var(--dark-blue);
+  color: var(--light-blue);
+}
+
+/* Top Container */
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'header header'
+    'main-box-a main-box-b';
+}
+
+/* h1, h2, h3 {
   color: royalblue;
   font-family: sans-serif;
   font-size: 12pt;
@@ -63,7 +122,7 @@ li {
 
 main {
   padding: 5px;
-}
+} */
 
 /* .flex {
   display: flex;
