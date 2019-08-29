@@ -133,13 +133,13 @@ img {
   padding: 0.8rem;
 }
 
-.main-box-a {
+/* .main-box-a {
   grid-area: main-box-a;
 }
 
 .main-box-b {
   grid-area: main-box-b;
-}
+} */
 
 /* Games */
 #kick-off {
@@ -150,13 +150,13 @@ img {
   display: flex;
 }
 
-#new-game-form {
+/* #new-game-form { */
   /* display: flex; */
   /* grid-gap: 10px;
   grid-template-areas:
     'team-a-selection team-b-selection'; */
   /* margin-top: 1rem; */
-}
+/* } */
 
 .team-a-selection {
   font-size: 0.8rem;

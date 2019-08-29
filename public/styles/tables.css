@@ -8,9 +8,9 @@ table, td, th {
 }
 
 .small-league-table {
-  width: 100px;
-  margin-right: 20px;
-  margin-left: auto;
+  /* width: 100px; */
+  /* margin-right: 20px; */
+  /* margin-left: auto; */
 }
 
 .full-league-table {
