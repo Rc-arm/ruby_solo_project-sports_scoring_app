@@ -14,6 +14,10 @@ get '/games/new' do #new
   erb(:"games/new")
 end
 
+get '/games/new-fixture' do #new
+  erb(:"games/fixtures")
+end
+
 post '/games' do #create
   @game = Game.new(params)
   @game.save()

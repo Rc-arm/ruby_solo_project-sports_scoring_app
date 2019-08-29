@@ -18,8 +18,8 @@ get '/teams/league-table' do
   erb( :"teams/league_table" )
 end
 
-get '/teams/fixtures' do
-  erb( :"teams/fixtures" )
+get '/games/fixtures' do
+  erb( :"games/fixtures" )
 end
 
 get '/about' do

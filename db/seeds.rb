@@ -6,7 +6,7 @@ Game.delete_all()
 Team.delete_all()
 
 team1 = Team.new({
-  "name" => "Gym",
+  "name" => "The Gym Bunnies",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -16,7 +16,7 @@ team1 = Team.new({
 team1.save()
 
 team2 = Team.new({
-  "name" => "Shop Inventory",
+  "name" => "Shop Winventory",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -26,7 +26,7 @@ team2 = Team.new({
 team2.save()
 
 team3 = Team.new({
-  "name" => "Spending Tracker",
+  "name" => "Spending Tracker Big Spenders",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -36,7 +36,7 @@ team3 = Team.new({
 team3.save()
 
 team4 = Team.new({
-  "name" => "Sport Scoring",
+  "name" => "Sports Scorers",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -46,7 +46,7 @@ team4 = Team.new({
 team4.save()
 
 team5 = Team.new({
-  "name" => "Travel Bucket List",
+  "name" => "Travel Bucket List Jetsetters",
   "played" => 0,
   "won" => 0,
   "lost" => 0,
@@ -56,7 +56,7 @@ team5 = Team.new({
 team5.save()
 
 team6 = Team.new({
-  "name" => "Vet Management",
+  "name" => "Vet Squad Managers",
   "played" => 0,
   "won" => 0,
   "lost" => 0,

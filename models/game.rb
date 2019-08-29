@@ -93,7 +93,6 @@ class Game
   def play(teams)
     teams = [@team_a_id, @team_b_id]
     winning_team = teams.sample()
-    puts winning_team
   end
 
 end
