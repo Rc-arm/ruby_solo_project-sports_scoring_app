@@ -1,27 +1,37 @@
 <h1>Play a Game</h1>
 
-<h2>Kick off!</h2>
+<h2 id="kick-off">Kick off!</h2>
 
-<form method="post" action="/games">
-  <label for="team_a">Select Team A:</label>
-  <select name="Team A" id="team-a-selection">
-    <option value="Gym">Gym</option>
-    <option value="Shop Inventory">Shop Inventory</option>
-    <option value="Spending Tracker">Spending Tracker</option>
-    <option value="Sport Scoring">Sport Scoring</option>
-    <option value="Travel Bucket List">Travel Bucket List</option>
-    <option value="Vet Management">Vet Management</option>
-  </select>
+<div class="new-game-form-container">
+  <form method="post" action="/games">
+    <div class="box-1">
+    <label for="team_a" class="team-a-selection">Select Team A:</label>
+    <select name="Team A">
+      <option value="Gym">Gym</option>
+      <option value="Shop Inventory">Shop Inventory</option>
+      <option value="Spending Tracker">Spending Tracker</option>
+      <option value="Sport Scoring">Sport Scoring</option>
+      <option value="Travel Bucket List">Travel Bucket List</option>
+      <option value="Vet Management">Vet Management</option>
+    </select>
+    </div>
 
-  <label for="team_b">Select Team B:</label>
-  <select name="Team B" id="team-b-selection">
-    <option value="Gym">Gym</option>
-    <option value="Shop Inventory">Shop Inventory</option>
-    <option value="Spending Tracker">Spending Tracker</option>
-    <option value="Sport Scoring">Sport Scoring</option>
-    <option value="Travel Bucket List">Travel Bucket List</option>
-    <option value="Vet Management">Vet Management</option>
-  </select>
+    <div class="box-2"
+    <p><i>vs</i></p>
+    </div>
 
-  <input type="submit" value="GO!">
-</form>
+    <div class="box-3">
+    <label for="team_b" class="team-b-selection">Select Team B:</label>
+    <select name="Team B">
+      <option value="Gym">Gym</option>
+      <option value="Shop Inventory">Shop Inventory</option>
+      <option value="Spending Tracker">Spending Tracker</option>
+      <option value="Sport Scoring">Sport Scoring</option>
+      <option value="Travel Bucket List">Travel Bucket List</option>
+      <option value="Vet Management">Vet Management</option>
+    </select>
+    </div>
+
+    <input type="submit" value="GO!">
+  </form>
+</div>

@@ -3,17 +3,17 @@
 <head>
   <title>Ultimate Hackathon League</title>
 
-  <!-- <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
   <link rel="stylesheet" type="text/css" href="/styles/forms.css">
   <link rel="stylesheet" type="text/css" href="/styles/structure.css">
-  <link rel="stylesheet" type="text/css" href="/styles/tables.css"> -->
+  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
 </head>
-<body>
-  <div class="wrapper"
-    <h1>Ultimate Hackathon League</h1>
-    <h2>Sponsored by CodeClan</h2>
+<body id="page-container">
+  <div class="header-and-nav">
+    <h1 class="header-title">Ultimate Hackathon League</h1>
+    <h2 class="sponsored-by-codeclan">Sponsored by CodeClan</h2>
     <nav class="main-nav">
-      <ul id="homepage-list">
+      <ul>
         <li>
           <a href="/">Home</a>
         </li>
@@ -36,18 +36,18 @@
     </nav>
 
     <!-- Top Container -->
-    <section class="top-container"
+    <!-- <section class="top-container"
       <header class="showcase"
         <h1></h1>
       </header>
-    </section>
+    </section> -->
 
     <%= yield %>
   </div>
   <!-- Wrapper ends -->
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer">
     <p>Made by Rob &copy; </p>
   </footer>
 </body>
