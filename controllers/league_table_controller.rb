@@ -1,7 +1,10 @@
 require('sinatra')
 require('sinatra/contrib/all')
-also_reload('../models/*')
+require('pry')
+require_relative('../models/league_table.rb')
+require_relative('../models/teams.rb')
+also_reload('../../ruby_solo_project/*')
 
 get '/league-table' do
-  erb ( :"league_table/index" )
+  erb ( :"league_table" )
 end

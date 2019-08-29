@@ -1,11 +1,5 @@
 .btn a {
-  /* background-color: var(--dark-blue);
-  color: var(--light-blue)
-  padding: 0.6rem 1.3rem;
-  text-decoration: none;
-  border: 0; */
   background: var(--primary-blue);
-  /* display: block; */
   text-decoration: none;
   padding: 1rem 1.5rem;
   text-align: left;
@@ -18,15 +12,3 @@
   background: var(--dark);
   color: var(--primary-blue);
 }
-
-/* .btn--action:hover {
-  background-color: purple;
-}
-
-.btn--action {
-  background-color: lightblue;
-} */
-
-/* .btn--wrapper {
-
-} */
