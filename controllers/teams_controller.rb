@@ -39,3 +39,7 @@ post '/teams/:id/delete' do # delete
   Team.delete()
   redirect to '/teams'
 end
+
+get '/about' do # about index
+  erb(:"/about")
+end

@@ -69,7 +69,7 @@ class Team
   def self.find(id)
     sql = "SELECT * FROM teams
     WHERE id = $1"
-    value = [id]
+    values = [id]
     team = SqlRunner.run(sql, values)
     result = Team.new(team.first)
     return result
@@ -80,8 +80,8 @@ class Team
     SqlRunner.run( sql )
   end
 
-  def self.map_items(game_data)
-    return game_data.map { |game| Game.new(game) }
+  def self.map_items(team_data)
+    return team_data.map { |team| Team.new(team) }
   end
 
   # def won

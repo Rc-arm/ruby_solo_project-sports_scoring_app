@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require('pry')
-require_relative('../models/fixtures.rb')
+require_relative('../models/fixture.rb')
 require_relative('../models/team.rb')
 also_reload('../models/*')
 
