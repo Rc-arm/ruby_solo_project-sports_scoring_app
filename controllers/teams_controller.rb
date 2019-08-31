@@ -2,26 +2,40 @@ require('sinatra')
 require('sinatra/contrib/all')
 require('pry')
 require_relative('../models/team.rb')
-also_reload('../../ruby_solo_project/*')
+also_reload('../models/*')
 
-get '/teams' do
+get '/teams' do # index
   @teams = Team.all()
-  erb ( :"teams/index" )
+  erb(:"teams/index")
 end
 
-# get '/teams/:id' do
-#   @team = Team.find(params['id'].to_i)
-#   erb( :"teams/show" )
-# end
-
-get '/teams/league-table' do
-  erb( :"teams/league_table" )
+get '/teams/new' do # new
+  erb(:new)
 end
 
-get '/games/fixtures' do
-  erb( :"games/fixtures" )
+get '/teams/:id' do # show
+  @team = Team.find(params[:id])
+  erb(:show)
 end
 
-get '/about' do
-  erb( :"about" )
+post '/teams' do # create
+  @team = Team.new(params)
+  @team.save()
+  erb(:create)
+end
+
+get '/teams/:id/edit' do # edit
+  @team = Team.find(params[:id])
+  erb(:edit)
+end
+
+post '/teams/:id' do # update
+  Team.new(params).update
+  redirect to '/teams'
+end
+
+post '/teams/:id/delete' do # delete
+  team = Team.find(params[:id])
+  Team.delete()
+  redirect to '/teams'
 end

@@ -7,7 +7,7 @@
 
 <div class="add-fixture-form">
   <h3>Add a Fixture</h3>
-  <form method="post" action="/games/new">
+  <form method="post" action="/fixtures/new">
 
     <div>
     <label for="team_a" class="team-a-selection">Select Team A:</label>
@@ -36,12 +36,6 @@
     <div>
     <label for="winner" class="game-winner">Winner:</label>
     <select name="Winner">
-      <option value="Gym">Gym</option>
-      <option value="Shop Inventory">Shop Inventory</option>
-      <option value="Spending Tracker">Spending Tracker</option>
-      <option value="Sport Scoring">Sport Scoring</option>
-      <option value="Travel Bucket List">Travel Bucket List</option>
-      <option value="Vet Management">Vet Management</option>
     </select>
     </div>
 
@@ -53,10 +47,10 @@
   <div class="fixtures-box">
   <table class="fixtures-table">
     <tr>
-      <td>(Team A)</td>
+      <td>Team A: <%= @fixture.team_a_id.name %></td>
       <td><i>vs</i></td>
-      <td>(Team B)</td>
-      <td>(Edit & Delete buttons)</td>
+      <td>Team B: <%= @fixture.team_b_id.name %></td>
+      <td><a href="/fixtures<%= @fixture.id %>/edit">Edit</a><a href="/fixtures<%= @fixture.id %>/delete">Delete></a></td>
     </tr>
     <tr>
       <td>(Team A)</td>

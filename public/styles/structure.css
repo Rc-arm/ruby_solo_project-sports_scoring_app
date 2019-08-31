@@ -141,22 +141,7 @@ img {
   grid-area: main-box-b;
 } */
 
-/* Games */
-#kick-off {
-  padding: 10px;
-}
-
-.new-game-form-container {
-  display: flex;
-}
-
-/* #new-game-form { */
-  /* display: flex; */
-  /* grid-gap: 10px;
-  grid-template-areas:
-    'team-a-selection team-b-selection'; */
-  /* margin-top: 1rem; */
-/* } */
+/* Fixtures */
 
 .team-a-selection {
   font-size: 0.8rem;

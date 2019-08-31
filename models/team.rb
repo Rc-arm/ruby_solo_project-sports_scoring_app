@@ -69,20 +69,10 @@ class Team
   def self.find(id)
     sql = "SELECT * FROM teams
     WHERE id = $1"
-    values = [id]
-    result = SqlRunner.run(sql, values).first
-    team = Team.new(result)
-    return team
-    # Need to add in capitalize function
-  end
-
-  def self.find_id(id)
-    sql = "SELECT id FROM teams
-    WHERE name = $1"
-    values = [name]
-    result = SqlRunner.run(sql, values).first
-    team = Team.new(result)
-    return team
+    value = [id]
+    team = SqlRunner.run(sql, values)
+    result = Team.new(team.first)
+    return result
   end
 
   def self.delete_all
@@ -94,17 +84,17 @@ class Team
     return game_data.map { |game| Game.new(game) }
   end
 
-  def won
-    @played += 1
-    @won += 1
-    @points += 3
-    update()
-  end
-
-  def lost
-    @played += 1
-    @lost += 1
-    update()
-  end
+  # def won
+  #   @played += 1
+  #   @won += 1
+  #   @points += 3
+  #   update()
+  # end
+  #
+  # def lost
+  #   @played += 1
+  #   @lost += 1
+  #   update()
+  # end
 
 end

@@ -1,4 +1,4 @@
-DROP TABLE games;
+DROP TABLE fixtures;
 DROP TABLE teams;
 
 CREATE TABLE teams (
@@ -10,9 +10,10 @@ CREATE TABLE teams (
   points INT4
 );
 
-CREATE TABLE games (
+CREATE TABLE fixtures (
   id SERIAL8 primary key,
   team_a_id INT8 REFERENCES teams(id),
   team_b_id INT8 REFERENCES teams(id),
-  winner_team_id INT8 REFERENCES teams(id)
+  winning_team_id INT8 REFERENCES teams(id),
+  losing_team_id INT8 REFERENCES teams(id)
 );
