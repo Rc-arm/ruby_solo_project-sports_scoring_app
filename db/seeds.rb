@@ -76,17 +76,48 @@ fixture1.save()
 
 fixture2 = Fixture.new({
   "team_a_id" => team3.id,
-  "team_b_id" => team4.id
+  "team_b_id" => team4.id,
+  "winning_team_id" => team4.id,
+  "losing_team_id" => team3.id
 })
 
 fixture2.save()
 
 fixture3 = Fixture.new({
   "team_a_id" => team5.id,
-  "team_b_id" => team6.id
+  "team_b_id" => team6.id,
+  "winning_team_id" => team5.id,
+  "losing_team_id" => team6.id
 })
 
-Fixture3.save()
+fixture3.save()
+
+fixture4 = Fixture.new({
+  "team_a_id" => team1.id,
+  "team_b_id" => team3.id,
+  "winning_team_id" => team1.id,
+  "losing_team_id" => team3.id
+})
+
+fixture4.save()
+
+fixture5 = Fixture.new({
+  "team_a_id" => team2.id,
+  "team_b_id" => team5.id,
+  "winning_team_id" => team2.id,
+  "losing_team_id" => team5.id
+})
+
+fixture5.save()
+
+fixture6 = Fixture.new({
+  "team_a_id" => team4.id,
+  "team_b_id" => team6.id,
+  "winning_team_id" => team4.id,
+  "losing_team_id" => team6.id
+})
+
+fixture6.save()
 
 binding.pry
 nil

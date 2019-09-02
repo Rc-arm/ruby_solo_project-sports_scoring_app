@@ -18,7 +18,7 @@ class Fixture
     sql = "INSERT INTO fixtures
     (
       team_a_id,
-      team_b_id.
+      team_b_id,
       winning_team_id,
       losing_team_id
     )
@@ -35,7 +35,7 @@ class Fixture
   def self.find(id)
     sql = "SELECT * FROM fixtures
     WHERE id = $1"
-    value = [id]
+    values = [id]
     fixture = SqlRunner.run(sql, values)
     result = Fixture.new(fixture.first)
     return result
@@ -79,6 +79,15 @@ class Fixture
 
   def self.map_items(fixture_data)
     return fixture_data.map { |fixture| Fixture.new(fixture) }
+  end
+
+  def self.name()
+    sql = "SELECT name FROM teams
+    WHERE id = $1"
+    values = [id]
+    name = SqlRunner.run(sql, values)
+    result = Team.new(team.first)
+    return result
   end
 
 #   def team_a_id

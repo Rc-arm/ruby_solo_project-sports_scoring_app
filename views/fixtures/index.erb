@@ -5,7 +5,7 @@
 <body>
   <h1>Fixtures</h1>
 
-<div class="add-fixture-form">
+<!-- <div class="add-fixture-form">
   <h3>Add a Fixture</h3>
   <form method="post" action="/fixtures/new">
 
@@ -41,9 +41,15 @@
 
     <input type="submit" value="Add Fixture">
   </form
-</div>
+</div> -->
 
-<div class="fixtures-container">
+<% @fixtures.each do |fixture| %>
+  <p><%= fixture.team_a_id %> <i>vs</i> <%= fixture.team_b_id %></p>
+  <p>Winner: <%= fixture.winning_team_id %>!</p>
+  <hr />
+<% end %>
+
+<!-- <div class="fixtures-container">
   <div class="fixtures-box">
   <table class="fixtures-table">
     <tr>
@@ -83,7 +89,7 @@
       <td>(Edit & Delete buttons)</td>
     </tr>
   </table>
-  </div>
+  </div> -->
 
 
 </body>

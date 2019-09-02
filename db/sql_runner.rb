@@ -5,7 +5,7 @@ class SqlRunner
   def self.run( sql, values = [] )
     begin
       db = PG.connect({ dbname: 'sport_scoring_app', host: 'localhost' })
-      db.prepare("query", sql)
+      db.prepare( "query", sql )
       result = db.exec_prepared( "query", values )
     ensure
       db.close() if db != nil
