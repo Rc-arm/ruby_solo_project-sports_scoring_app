@@ -5,91 +5,20 @@
 <body>
   <h1>Fixtures</h1>
 
-<!-- <div class="add-fixture-form">
-  <h3>Add a Fixture</h3>
-  <form method="post" action="/fixtures/new">
+  <div class="add-fixture">
+    <p class="btn">
+      <a class="btn" href="/fixtures/new">Add a Fixture</a>
+    </p>
+  </div>
 
-    <div>
-    <label for="team_a" class="team-a-selection">Select Team A:</label>
-    <select name="Team A">
-      <option value="Gym">Gym</option>
-      <option value="Shop Inventory">Shop Inventory</option>
-      <option value="Spending Tracker">Spending Tracker</option>
-      <option value="Sport Scoring">Sport Scoring</option>
-      <option value="Travel Bucket List">Travel Bucket List</option>
-      <option value="Vet Management">Vet Management</option>
-    </select>
-    </div>
-
-    <div>
-    <label for="team_b" class="team-b-selection">Select Team B:</label>
-    <select name="Team b">
-      <option value="Gym">Gym</option>
-      <option value="Shop Inventory">Shop Inventory</option>
-      <option value="Spending Tracker">Spending Tracker</option>
-      <option value="Sport Scoring">Sport Scoring</option>
-      <option value="Travel Bucket List">Travel Bucket List</option>
-      <option value="Vet Management">Vet Management</option>
-    </select>
-    </div>
-
-    <div>
-    <label for="winner" class="game-winner">Winner:</label>
-    <select name="Winner">
-    </select>
-    </div>
-
-    <input type="submit" value="Add Fixture">
-  </form
-</div> -->
-
-<% @fixtures.each do |fixture| %>
-  <p><%= fixture.team_a_id %> <i>vs</i> <%= fixture.team_b_id %></p>
-  <p>Winner: <%= fixture.winning_team_id %>!</p>
-  <hr />
-<% end %>
-
-<!-- <div class="fixtures-container">
-  <div class="fixtures-box">
-  <table class="fixtures-table">
-    <tr>
-      <td>Team A: </td>
-      <td><i>vs</i></td>
-      <td>Team B: </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>(Team A)</td>
-      <td><i>vs</i></td>
-      <td>(Team B)</td>
-      <td>(Edit & Delete buttons)</td>
-    </tr>
-    <tr>
-      <td>(Team A)</td>
-      <td><i>vs</i></td>
-      <td>(Team B)</td>
-      <td>(Edit & Delete buttons)</td>
-    </tr>
-    <tr>
-      <td>(Team A)</td>
-      <td><i>vs</i></td>
-      <td>(Team B)</td>
-      <td>(Edit & Delete buttons)</td>
-    </tr>
-    <tr>
-      <td>(Team A)</td>
-      <td><i>vs</i></td>
-      <td>(Team B)</td>
-      <td>(Edit & Delete buttons)</td>
-    </tr>
-    <tr>
-      <td>(Team A)</td>
-      <td><i>vs</i></td>
-      <td>(Team B)</td>
-      <td>(Edit & Delete buttons)</td>
-    </tr>
-  </table>
-  </div> -->
-
+  <% @fixtures.each do |fixture| %>
+    <p><%= fixture.team_a.name %> <i>vs</i> <%= fixture.team_b.name %></p>
+    <p>Winner: <%= fixture.winning_team.name %>!</p>
+    <a class="btn" href="/fixtures/<%= fixture.id %>/edit">Edit</a>
+    <form method="post" action="/fixtures/<%= fixture.id %>/delete">
+      <input type="submit" value="Delete"/>
+    </form>
+    <hr />
+  <% end %>
 
 </body>

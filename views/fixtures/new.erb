@@ -1,37 +1,38 @@
-<h1>Play a Game</h1>
+<h1>Add a Fixture</h1>
 
 <h2 id="kick-off">Kick off!</h2>
 
 <div class="new-fixture-form-container">
   <form method="post" action="/fixtures">
-    <div class="box-1">
-    <label for="team_a" class="team-a-selection">Select Team A:</label>
-    <select name="Team A">
-      <option value="Gym">Gym</option>
-      <option value="Shop Inventory">Shop Inventory</option>
-      <option value="Spending Tracker">Spending Tracker</option>
-      <option value="Sport Scoring">Sport Scoring</option>
-      <option value="Travel Bucket List">Travel Bucket List</option>
-      <option value="Vet Management">Vet Management</option>
-    </select>
-    </div>
+    <label>
+    Select Team A:
+      <select name="team_a_id">
 
-    <div class="box-2"
-    <p><i>vs</i></p>
-    </div>
+      </select>
+    </label>
 
-    <div class="box-3">
-    <label for="team_b" class="team-b-selection">Select Team B:</label>
-    <select name="Team B">
-      <option value="Gym">Gym</option>
-      <option value="Shop Inventory">Shop Inventory</option>
-      <option value="Spending Tracker">Spending Tracker</option>
-      <option value="Sport Scoring">Sport Scoring</option>
-      <option value="Travel Bucket List">Travel Bucket List</option>
-      <option value="Vet Management">Vet Management</option>
-    </select>
-    </div>
+    <label>
+    Select Team B:
+      <select name="team_b_id">
 
-    <input type="submit" value="GO!">
+      </select>
+    </label>
+
+    <label>
+    Winning Team:
+      <select name="winning_team_id">
+
+      </select>
+    </label>
+
+    <label>
+    Losing Team:
+      <select name="losing_team_id">
+
+      </select>
+    </label>
+
+
+    <input type="submit" value="Add Fixture">
   </form>
 </div>

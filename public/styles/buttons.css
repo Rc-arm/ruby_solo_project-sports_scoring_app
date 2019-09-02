@@ -12,3 +12,7 @@
   background: var(--dark);
   color: var(--primary-blue);
 }
+
+#btn-add-team {
+  height: 10px;
+}

@@ -81,23 +81,32 @@ class Fixture
     return fixture_data.map { |fixture| Fixture.new(fixture) }
   end
 
-  def self.name()
-    sql = "SELECT name FROM teams
+  def team_a()
+    sql = "SELECT * FROM teams
     WHERE id = $1"
-    values = [id]
-    name = SqlRunner.run(sql, values)
-    result = Team.new(team.first)
+    values = [@team_a_id]
+    teams = SqlRunner.run(sql, values)
+    result = Team.new(teams.first)
     return result
   end
 
-#   def team_a_id
-# # What does this need to do? In the game there's a team_a and a team_b (where team_a currently is always the winner). This method is for taking the team from the database so it can be used in .play.
-#   @team_a_id = team_a(id)
-#   end
+  def team_b()
+    sql = "SELECT * FROM teams
+    WHERE id = $1"
+    values = [@team_b_id]
+    teams = SqlRunner.run(sql, values)
+    result = Team.new(teams.first)
+    return result
+  end
 
-  # def team_b_id
-  #   @team_b_id = team_b(id)
-  # end
+  def winning_team()
+    sql = "SELECT * FROM teams
+    WHERE id = $1"
+    values = [@winning_team_id]
+    teams = SqlRunner.run(sql, values)
+    result = Team.new(teams.first)
+    return result
+  end
 
   # def play(teams)
   #   teams = [@team_a_id, @team_b_id]

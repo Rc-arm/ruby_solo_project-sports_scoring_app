@@ -167,3 +167,9 @@ img {
 /* .team-box {
   height: 50%;
 } */
+
+/* About Page */
+#about {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}

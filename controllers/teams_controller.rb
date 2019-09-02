@@ -10,33 +10,34 @@ get '/teams' do # index
 end
 
 get '/teams/new' do # new
-  erb(:new)
+  erb(:"teams/new")
 end
 
 get '/teams/:id' do # show
   @team = Team.find(params[:id])
-  erb(:show)
+  erb(:"teams/show")
 end
 
 post '/teams' do # create
   @team = Team.new(params)
   @team.save()
-  erb(:create)
+  redirect to '/teams'
 end
 
 get '/teams/:id/edit' do # edit
   @team = Team.find(params[:id])
-  erb(:edit)
+  erb(:"teams/edit")
 end
 
 post '/teams/:id' do # update
+  # binding.pry
   Team.new(params).update
   redirect to '/teams'
 end
 
 post '/teams/:id/delete' do # delete
   team = Team.find(params[:id])
-  Team.delete()
+  team.delete()
   redirect to '/teams'
 end
 

@@ -28,7 +28,7 @@ end
 
 get '/fixtures/:id/edit' do # edit
   @fixture = Fixture.find(params[:id])
-  erb(:edit)
+  erb(:"fixtures/edit")
 end
 
 post '/fixtures/:id' do # update

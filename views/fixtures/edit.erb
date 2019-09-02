@@ -1,0 +1,16 @@
+<h1>Edit Fixture</h1>
+
+<div class="edit-fixture-form-container">
+  <form method="post" action="/fixtures/<%= @fixture.id %>"">
+    <label>Team A:</label>
+      <input type="text" name="team_a_id" value="<%= @fixture.team_a_id %>"/>
+    <label>Team B:</label>
+      <input type="text" name="team_b_id" value="<%= @fixture.team_b_id %>"/>
+    <label>Winning Team:</label>
+      <input type="text" name="winning_team_id" value="<%= @fixture.winning_team_id %>"/>
+    <label>Losing Team:</label>
+      <input type="text" name="losing_team_id" value="<%= @fixture.losing_team_id %>"/>
+
+    <input type="submit" value="Update Fixture">
+  </form>
+</div>

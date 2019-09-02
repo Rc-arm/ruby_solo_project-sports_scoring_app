@@ -1,0 +1,15 @@
+<h1>Edit Team</h1>
+
+<div class="edit-fixture-form-container">
+  <form method="post" action="/teams/<%= @team.id %>"">
+    <label>Name:</label>
+      <input type="text" name="name" value="<%= @team.name %>"/>
+      <input type="hidden" name="played" value="<%= @team.played %>"/>
+      <input type="hidden" name="won" value="<%= @team.won %>"/>
+      <input type="hidden" name="lost" value="<%= @team.lost %>"/>
+      <input type="hidden" name="points" value="<%= @team.points %>"/>
+
+
+    <input type="submit" value="Update Team">
+  </form>
+</div>
