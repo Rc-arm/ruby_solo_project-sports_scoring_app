@@ -76,7 +76,7 @@ class Team
 
   def self.delete_all
     sql = "DELETE FROM teams"
-    SqlRunner.run( sql )
+    # SqlRunner.run( sql )
   end
 
   def self.map_items(team_data)

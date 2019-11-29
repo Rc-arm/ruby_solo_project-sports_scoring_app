@@ -12,8 +12,8 @@
   </div>
 
   <% @fixtures.each do |fixture| %>
-    <p><%= fixture.team_a.name %> <i>vs</i> <%= fixture.team_b.name %></p>
-    <p>Winner: <%= fixture.winning_team.name %>!</p>
+    <p><b><%= fixture.team_a.name %></b> <i>vs</i> <b><%= fixture.team_b.name %></b></p>
+    <p>Winner: <b><%= fixture.winning_team.name %>!</b></p>
     <a class="btn" href="/fixtures/<%= fixture.id %>/edit">Edit</a>
     <form method="post" action="/fixtures/<%= fixture.id %>/delete">
       <input type="submit" value="Delete"/>

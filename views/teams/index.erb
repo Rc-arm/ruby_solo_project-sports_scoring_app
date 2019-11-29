@@ -14,7 +14,7 @@
   <div class="teams-container">
     <% @teams.each do |team| %>
       <p><b><%= team.name %></b></p>
-      <p>Previous matches: __</p>
+      <!-- <p>Previous matches: __</p> -->
       <a class="btn" href="/teams/<%= team.id %>/edit">Edit</a>
       <form class= "btn" method="post" action="/teams/<%= team.id %>/delete">
         <input type="submit" value="Delete"/>
