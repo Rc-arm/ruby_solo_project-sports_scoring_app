@@ -1,13 +1,13 @@
-# NewTrition
+# Sports Scoring App
 
-### An app created to __
+### An app created using Ruby and Sinatra to show teams and fixtures in a league.
 
-This is version 1.0 of the app, created during the 5th week of the CodeClan Professional Software Development course.
+This is version 1.0 of the app, which I created for the first project of the CodeClan Professional Software Development course.
 
-I have created the same app using different languages and frameworks to further my understanding of these technologies and the process of implementing design choices and functionality.
+Since the course has ended I have created the same app using different languages and frameworks to further my understanding of these technologies and the process of implementing design choices and functionality.
 
 ### v2.0
-- Since v1.0 was created on a MacBook Pro, I created it from scratch on a Windows laptop
+- Since v1.0 was created on a MacBook Pro, I recreated it from scratch on Windows
 - (GitHub link)
 
 ### v3.0
@@ -23,9 +23,13 @@ I have created the same app using different languages and frameworks to further 
 ### MVP:
 A user should be able to…
 
-- 
+- Create, edit and delete teams to the league
+- Create, edit and delete games
+- There should be a way to display all the games for a team and all the teams involved in a game
+- The app should display if a game was won or lost
 
 ### Extensions:
+- Create a league table to see who is on top of the league
 - 
 
 ## Installation After Pulling from GitHub
