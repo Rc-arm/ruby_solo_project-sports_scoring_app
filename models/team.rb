@@ -59,7 +59,7 @@ class Team
   end
 
   def self.all()
-    sql = "SELECT * FROM teams"
+    sql = "SELECT * FROM teams ORDER BY name ASC"
     team_data = SqlRunner.run(sql)
     teams = map_items(team_data)
     return teams
