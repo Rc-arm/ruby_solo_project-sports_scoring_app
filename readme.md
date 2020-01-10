@@ -1,6 +1,6 @@
 # Sports Scoring App
 
-### An app created to show teams and fixtures in a league
+### An app for showing teams and fixtures in a league
 
 This is version 1.0.
 
@@ -8,15 +8,9 @@ I created the app using Ruby and Sinatra as my first project during week 5 of th
 
 Upon completion of the course I have recreated the app using different languages and frameworks in order to further understand the implementation of functionality and design choices.
 
-### Version 2.0
-- Since v1.0 was created on a Mac I recreated the app on Windows
-- [Sports Scoring App - Ruby & Sinatra (created on Windows)](https://github.com/rcarmitage/codeclan_solo_project-sports_scoring_app_v2.0_ruby_sinatra)
-
-### Version 3.0
-- [Sports Scoring App - JavaScript & Vue](https://github.com/rcarmitage/codeclan_solo_project-sports_scoring_app_v3.0_javascript_vue)
-
-### Version 4.0 (pending)
-- Sports Scoring App - JavaScript & React
+- Version 2.0 - Since v1.0 was created on a Mac I recreated the app on Windows: [Sports Scoring App - Ruby & Sinatra (created on Windows)](https://github.com/rcarmitage/codeclan_solo_project-sports_scoring_app_v2.0_ruby_sinatra)
+- Version 3.0: [Sports Scoring App - JavaScript & Vue](https://github.com/rcarmitage/codeclan_solo_project-sports_scoring_app_v3.0_javascript_vue)
+- Version 4.0 (pending): Sports Scoring App - JavaScript & React
 
 ## Brief
 
@@ -34,9 +28,9 @@ A user should be able to…
 
 ## Installation After Pulling from GitHub
 
+- 
 
-
-## How it works and what it does:
+## How it works and what it does
 
 - 
 
