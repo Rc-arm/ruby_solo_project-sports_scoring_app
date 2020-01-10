@@ -47,5 +47,5 @@ Screenshot
 
 ## My learning
 
-- During the 6 days given to complete the project, I initially allocated too much time to the extensions functionality. I included the league table in the design from the beginning, neglecting the MVP CRUD functionality for teams and fixtures until close to the presentation date.
+- During the 6 days given to complete the project I initially allocated too much time to the extensions functionality. I included the league table in the design from the beginning, neglecting the MVP CRUD functionality for teams and fixtures until close to the presentation date.
 - I have learned that for future projects I must focus on the baseline functionality until it is able to run bug-free. After this I will begin to add features incrementally.
