@@ -1,13 +1,13 @@
 # Sports Scoring App
 
-### An app created to show teams and fixtures in a league.
+### An app created to show teams and fixtures in a league
 
-This is version 1.0 of the app, which I created for the first project of the CodeClan Professional Software Development course.
+This is version 1.0 of the app. I created the app using Ruby and Sinatra as my first project during week 5 of the CodeClan Professional Software Development course.
 
-Since the course has ended I have recreated the app using different languages and frameworks to further my understanding of implementing design choices and functionality.
+Upon completion of the course I have recreated the app using different languages and frameworks to further understand the implementation of functionality and design choices.
 
 ### Version 2.0
-- Since v1.0 was created on a Mac I recreated it on Windows
+- Since v1.0 was created on a Mac I recreated the app on Windows
 - [Sports Scoring App - Ruby & Sinatra (created on Windows)](https://github.com/rcarmitage/codeclan_solo_project-sports_scoring_app_v2.0_ruby_sinatra)
 
 ### Version 3.0
@@ -51,4 +51,4 @@ Screenshot
 ## My learning
 
 - During the 6 days given to complete the project, I initially allocated too much time to the extensions functionality. I included the league table in the design from the beginning, neglecting the MVP CRUD functionality for teams and fixtures until close to the presentation date.
-- For future projects I have learned that I must focus on the baseline functionality until it is able to run bug-free. After this I will begin to add features incrementally.
+- I have learned that for future projects I must focus on the baseline functionality until it is able to run bug-free. After this I will begin to add features incrementally.
