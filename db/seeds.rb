@@ -1,4 +1,4 @@
-require('pry')
+# require('pry')
 require_relative('../models/team.rb')
 require_relative('../models/fixture.rb')
 
